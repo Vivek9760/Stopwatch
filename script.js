@@ -10,8 +10,11 @@ function stopwatch() {
   let min = document.getElementById("min");
   let hr = document.getElementById("hr");
   let start = true;
+  let flag = false;
+  let count = 0;
+  let z = `00 : 00 : 00 : 00`
   let interval;
-
+  let round = document.getElementById('round');
   document.getElementById("start").addEventListener("click", () => {
     if (start === true) {
       interval = setInterval(() => {
@@ -57,24 +60,58 @@ function stopwatch() {
       }, 10);
       start = false;
       document.getElementById("start").innerText = "Stop";
+      flag = true;
+      count+=1
+      document.getElementById('reset').innerText=`Round ${count}`;
     } else {
       clearInterval(interval);
+      flag = false;
       start = true;
       document.getElementById("start").innerText = "Start";
+      document.getElementById('reset').innerText='Reset';
     }
   });
 
   document.getElementById("reset").addEventListener("click", () => {
-    miliseconds = 00;
-    seconds = 00;
-    minutes = 00;
-    hours = 00;
-    clearInterval(interval);
-    start = true;
-    document.getElementById("start").innerText = "Start";
-    ms.innerText = `0${miliseconds}`;
-    sec.innerText = `0${seconds}`;
-    min.innerText = `0${minutes}`;
-    hr.innerText = `0${hours}`;
+
+    if(flag === false){
+      miliseconds = 00;
+      seconds = 00;
+      minutes = 00;
+      hours = 00;
+      clearInterval(interval);
+      ms.innerText = `0${miliseconds}`;
+      sec.innerText = `0${seconds}`;
+      min.innerText = `0${minutes}`;
+      hr.innerText = `0${hours}`;
+      round.innerHTML = ''
+      count = 0;
+    }else{
+      if(minutes<10 && seconds<10  && miliseconds<10){
+        z = `0${hours} : 0${minutes} : 0${seconds} : 0${miliseconds}`
+      }
+      else if(seconds<10 && miliseconds<10){
+      z = `0${hours} : ${minutes} : 0${seconds} : 0${miliseconds}`
+      }
+      else if(minutes<10 && seconds<10 ){
+      z = `0${hours} : 0${minutes} : 0${seconds} : ${miliseconds}`
+      }
+      else if(minutes<10 && miliseconds<10){
+      z = `0${hours} : 0${minutes} : ${seconds} : 0${miliseconds}`
+      }else{
+        if(miliseconds<10){
+          z = `0${hours} : ${minutes} : ${seconds} : 0${miliseconds}`
+        }else if(seconds<10){
+          z = `0${hours} : ${minutes} : 0${seconds} : ${miliseconds}`
+        }else if(minutes<10){
+          z = `0${hours} : 0${minutes} : ${seconds} : ${miliseconds}`
+        }else{
+          z = `0${hours} : ${minutes} : ${seconds} : ${miliseconds}`
+        }
+      }
+      count+=1;
+      document.getElementById('reset').innerText=`Round ${count}`;
+        round.insertAdjacentHTML('afterbegin',`<li>${z}</li>`)
+    }
   });
 }

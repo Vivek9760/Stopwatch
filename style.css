@@ -47,3 +47,16 @@ p{
 span{
     font-size: 7rem;
 }
+
+
+ol{
+    /* border: 1px solid white; */
+    margin-top:80px;
+    height: 150px;
+    overflow: auto;
+    width: 200px;
+}
+
+li{
+    list-style: none;
+}
