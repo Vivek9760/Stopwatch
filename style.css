@@ -8,7 +8,6 @@ body{
 
 div#row{
     display: flex;
-
 }
 
 #container{
@@ -24,9 +23,9 @@ div#row{
 #start{
     background-color: rgb(103, 205, 97);
     border: none;
-    font-size: 25px;
-    width: 200px;
-    height: 55px;
+    font-size: 20px;
+    width: 80px;
+    height: 30px;
     margin-right: 50px;
     cursor: pointer;
 }
@@ -34,9 +33,9 @@ div#row{
     background-color: rgb(236, 145, 105);
     cursor: pointer;
     border: none;
-    font-size: 25px;
-    width: 200px;
-    height: 55px;
+    font-size: 20px;
+    width: 80px;
+    height: 30px;
 }
 
 p{
@@ -59,4 +58,31 @@ ol{
 
 li{
     list-style: none;
+}
+
+@media screen and (max-width:500px) {
+    div#row{
+        flex-direction: column;
+    }
+    p{
+        /* border:1px solid red; */
+        margin: 2px;
+        padding: 5px;
+        font-size: 20px;
+    }
+    
+    span{
+        font-size: 100px;
+    }
+
+    ol{
+        margin-top:20px;
+    }
+    #reset{
+        font-size: 15px;
+    }
+    #start{
+        font-size: 15px;
+    }
+    
 }
