@@ -11,7 +11,7 @@ function stopwatch() {
   let hr = document.getElementById("hr");
   let start = true;
   let flag = false;
-  let count = 0;
+  let count = 1;
   let z = `00 : 00 : 00 : 00`
   let interval;
   let round = document.getElementById('round');
@@ -61,7 +61,6 @@ function stopwatch() {
       start = false;
       document.getElementById("start").innerText = "Stop";
       flag = true;
-      count+=1
       document.getElementById('reset').innerText=`Round ${count}`;
     } else {
       clearInterval(interval);

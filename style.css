@@ -45,13 +45,14 @@ p{
 
 span{
     font-size: 7rem;
+    text-shadow: 3px 2px 4px rgb(103, 205, 97);
 }
 
 
 ol{
     /* border: 1px solid white; */
     margin-top:80px;
-    height: 150px;
+    height: 100px;
     overflow: auto;
     width: 200px;
 }
@@ -77,6 +78,7 @@ li{
 
     ol{
         margin-top:20px;
+        height: 90px;
     }
     #reset{
         font-size: 15px;
