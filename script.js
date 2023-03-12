@@ -84,7 +84,7 @@ function stopwatch() {
       min.innerText = `0${minutes}`;
       hr.innerText = `0${hours}`;
       round.innerHTML = ''
-      count = 0;
+      count = 1;
     }else{
       if(minutes<10 && seconds<10  && miliseconds<10){
         z = `0${hours} : 0${minutes} : 0${seconds} : 0${miliseconds}`
