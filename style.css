@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(0, 0, 0);
+    color: rgb(11, 246, 42);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+div#row{
+    display: flex;
+
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    /* border: 1px solid red; */
+    height: 100vh;
+    width: 100vw;
+}
+#start{
+    background-color: rgb(103, 205, 97);
+    border: none;
+    font-size: 25px;
+    width: 200px;
+    height: 55px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+#reset{
+    background-color: rgb(236, 145, 105);
+    cursor: pointer;
+    border: none;
+    font-size: 25px;
+    width: 200px;
+    height: 55px;
+}
+
+p{
+    padding: 15px;
+    font-size: 2em;
+}
+
+span{
+    font-size: 7rem;
+}
