@@ -23,9 +23,9 @@ div#row{
 #start{
     background-color: rgb(103, 205, 97);
     border: none;
-    font-size: 20px;
-    width: 80px;
-    height: 30px;
+    font-size: 25px;
+    width: 200px;
+    height: 50px;
     margin-right: 50px;
     cursor: pointer;
 }
@@ -33,9 +33,9 @@ div#row{
     background-color: rgb(236, 145, 105);
     cursor: pointer;
     border: none;
-    font-size: 20px;
-    width: 80px;
-    height: 30px;
+    font-size: 25px;
+    width: 200px;
+    height: 50px;
 }
 
 p{
@@ -80,9 +80,13 @@ li{
     }
     #reset{
         font-size: 15px;
+        width: 80px;
+    height: 30px;
     }
     #start{
         font-size: 15px;
+        width: 80px;
+    height: 30px;
     }
     
 }
